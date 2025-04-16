@@ -1,0 +1,50 @@
+﻿
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html,
+body {
+    background-color: #fafafa;
+    height: 100%;
+}
+
+body.pushable > .pusher {
+    background-color: #fafafa;
+}
+
+#aspnetForm {
+    height: 100%;
+}
+
+#page,
+.page {
+    height: 100%;
+}
+
+.ui.wide.padded {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.ui.grid.container {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    width: 100%;
+    height: 100%;
+}
+
+.update-panel {
+    height: 100%;
+}
+
+/** dimmer fix full-page **/
+.ui.dimmer {
+    position: fixed !important;
+}
+
+/** ie11 placeholder-fix **/
+.ui.form input:-ms-input-placeholder, .ui.form input[type=text]:-ms-input-placeholder, .ui.form input[type=email]:-ms-input-placeholder, .ui.form input[type=search]:-ms-input-placeholder, .ui.form input[type=password]:-ms-input-placeholder, .ui.form input[type=date]:-ms-input-placeholder, .ui.form input[type=datetime-local]:-ms-input-placeholder, .ui.form input[type=tel]:-ms-input-placeholder, .ui.form input[type=time]:-ms-input-placeholder, .ui.form input[type=file]:-ms-input-placeholder, .ui.form input[type=url]:-ms-input-placeholder, .ui.form input[type=number]:-ms-input-placeholder {
+    color: #999;
+}

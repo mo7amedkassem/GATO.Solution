@@ -1,0 +1,97 @@
+﻿/** color **/
+.color-black { color: #2f353b !important; }
+.color-white { color: #fff !important; }
+.color-grey { color: #95a5a6 !important; }
+.color-lightgreen { color: #38e460 !important; }
+.color-green { color: #26c281 !important; }
+.color-teal { color: #3faba4 !important; }
+.color-lightred { color: #fe434f !important; }
+.color-red { color: #e43a45 !important; }
+.color-blue { color: #2185d0 !important; }
+.color-lightorange { color: #ffa56a !important; }
+.color-orange { color: #f2711c !important; }
+.color-purple { color: #dc73ff !important; }
+.color-magenta { color: #900c3f !important; }
+
+/** format **/
+.height-full { height: 100%; }
+.width-full { width: 100%; }
+
+.pull-left { float: left !important; }
+.pull-right { float: right !important; }
+
+.fixed { position: fixed !important; }
+.absolute { position: absolute; }
+.hidden { visibility: hidden; }
+
+/** text **/
+.text-center { text-align: center; vertical-align:sub; }
+.text-left { text-align: left !important; }
+.text-right { text-align: right !important; }
+.text-small { font-size: 80%; }
+.text-small-90 { font-size: 90%; }
+.text-wrap { word-wrap: anywhere; display: block; }
+.text-dashed { border-bottom: 1px dashed #999; display: inline; }
+.text-bold { font-weight: bold !important; }
+.text-html-body { overflow: auto; overflow-wrap: break-word; max-height: 210px; max-width: 100%; font-size: 11px; padding: 4px; }
+.text-line-compact { line-height: 13px; }
+
+/** border **/
+.left-grey-border { border-left: 1px solid #eee; }
+.right-grey-border { border-right: 1px solid #eee; }
+
+/** header **/
+.ui.red.dividing.header { border-bottom: 1px solid #DB2828; }
+.ui.orange.dividing.header { border-bottom: 1px solid #F2711C; }
+.ui.green.dividing.header { border-bottom: 1px solid #21BA45; }
+.ui.teal.dividing.header { border-bottom: 1px solid #00B5AD; }
+.ui.blue.dividing.header { border-bottom: 1px solid #2185D0; }
+.ui.violet.dividing.header { border-bottom: 1px solid #6435C9; }
+.ui.purple.dividing.header { border-bottom: 1px solid #A333C8; }
+.ui.grey.dividing.header { border-bottom: 1px solid #E8E8E8; }
+.ui.black.dividing.header { border-bottom: 1px solid #1B1C1D; }
+
+/** button **/
+.ui.inverted.magenta.button, .ui.inverted.magenta.buttons .button { background-color: transparent; box-shadow: 0 0 0 2px #900c3f inset; color: #900c3f; }
+.ui.inverted.magenta.button.active, .ui.inverted.magenta.button:active, .ui.inverted.magenta.button:focus, .ui.inverted.magenta.button:hover, .ui.inverted.magenta.buttons .button.active, .ui.inverted.magenta.buttons .button:active, .ui.inverted.magenta.buttons .button:focus, .ui.inverted.magenta.buttons .button:hover { box-shadow: none; color: #fff; }
+.ui.inverted.magenta.button:hover, .ui.inverted.magenta.buttons .button:hover { background-color: #900c3f; }
+.ui.inverted.magenta.button:focus, .ui.inverted.magenta.buttons .button:focus { background-color: #900c3f; }
+.ui.inverted.magenta.active.button, .ui.inverted.magenta.buttons .active.button { background-color: #900c3f; }
+.ui.inverted.magenta.button:active, .ui.inverted.magenta.buttons .button:active { background-color: #900c3f; }
+
+/** position **/
+.m-t-0 { margin-top: 0px !important; }
+.m-t-5 { margin-top: 5px !important; }
+.m-t-10 { margin-top: 10px !important; }
+.m-t-15 { margin-top: 15px !important; }
+.m-t-20 { margin-top: 20px !important; }
+.m-t-30 { margin-top: 30px !important; }
+.m-t-40 { margin-top: 40px !important; }
+.m-t-50 { margin-top: 50px !important; }
+
+.m-b-0 { margin-bottom: 0px !important; }
+.m-b-5 { margin-bottom: 5px !important; }
+.m-b-10 { margin-bottom: 10px !important; }
+.m-b-15 { margin-bottom: 15px !important; }
+.m-b-20 { margin-bottom: 20px !important; }
+.m-b-30 { margin-bottom: 30px !important; }
+.m-b-40 { margin-bottom: 40px !important; }
+.m-b-50 { margin-bottom: 50px !important; }
+
+.m-l-0 { margin-left: 0px !important; }
+.m-l-5 { margin-left: 5px !important; }
+.m-l-10 { margin-left: 10px !important; }
+.m-l-15 { margin-left: 15px !important; }
+.m-l-20 { margin-left: 20px !important; }
+.m-l-30 { margin-left: 30px !important; }
+.m-l-40 { margin-left: 40px !important; }
+.m-l-50 { margin-left: 50px !important; }
+
+.m-r-0 { margin-right: 0px !important; }
+.m-r-5 { margin-right: 5px !important; }
+.m-r-10 { margin-right: 10px !important; }
+.m-r-15 { margin-right: 15px !important; }
+.m-r-20 { margin-right: 20px !important; }
+.m-r-30 { margin-right: 30px !important; }
+.m-r-40 { margin-right: 40px !important; }
+.m-r-50 { margin-right: 50px  !important; }

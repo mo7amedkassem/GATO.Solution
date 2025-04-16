@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://admin.monsterasp.net/app/dashboard -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Admin | MonsterASP.NET</title>
+
+    
+    <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=3.0, minimum-scale=0.3">
+
+    <!-- no-cache -->
+    
+
+    <link rel="stylesheet" href="./Admin _ MonsterASP.NET_files/semantic.min.css">
+    <link rel="stylesheet" href="./Admin _ MonsterASP.NET_files/layout.css">
+    <link rel="stylesheet" href="./Admin _ MonsterASP.NET_files/flexible.css">
+    <link rel="stylesheet" href="./Admin _ MonsterASP.NET_files/format.css">
+    <link rel="stylesheet" href="./Admin _ MonsterASP.NET_files/app.css">
+
+    <script src="./Admin _ MonsterASP.NET_files/jquery-3.7.1.min.js.download"></script>
+    <script src="./Admin _ MonsterASP.NET_files/semantic.min.js.download"></script>
+
+    <!-- jquery-upload -->
+    
+
+    <!-- jquery-select2 -->
+    
+
+    <!-- morris-graph -->
+    
+
+    <!-- ckeditor5 -->
+    
+</head>
+
+<body class="pushable"><div class="ui vertical sidebar menu mobile only left" style="">
+
+                            <!-- sidebarLeftMenu -->
+                            
+
+<div class="left-menu">
+    <div class="ui secondary vertical fluid small menu">
+
+        <!-- dashboard -->
+        <a id="ctl00_SidebarLeftMenu_btnDashboard" class="active item" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnDashboard&#39;,&#39;&#39;)"><i class="home icon"></i>
+            <span class="text">Dashboard</span>
+            <div class="sub text">Account overview</div>
+        </a>
+
+        <!-- subscription -->
+        <a id="ctl00_SidebarLeftMenu_btnSubscription" class="item" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnSubscription&#39;,&#39;&#39;)"><i class="cubes icon"></i>
+            <span class="text">Subscriptions <span id="ctl00_SidebarLeftMenu_lblSubscriptionIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Packages</div> <span class="ui horizontal mini basic label">0</span></a>
+
+        <!-- subscription/add -->
+        
+
+        <!-- site -->
+        <a id="ctl00_SidebarLeftMenu_btnSite" class="item" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnSite&#39;,&#39;&#39;)"><i class="desktop icon"></i>
+            <span class="text">Websites <span id="ctl00_SidebarLeftMenu_lblSiteIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Cloud websites</div> <span class="ui horizontal mini blue basic label">1</span></a>
+
+        <!-- site/add -->
+        
+
+        <!-- site/subdomain/add -->
+        
+
+        <!-- database -->
+        <a id="ctl00_SidebarLeftMenu_btnDatabase" class="item" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnDatabase&#39;,&#39;&#39;)"><i class="database icon"></i>
+            <span class="text">Databases <span id="ctl00_SidebarLeftMenu_lblDatabaseIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Cloud databases</div> <span class="ui horizontal mini blue basic label">1</span></a>
+
+        <!-- database/add -->
+        
+
+        <!-- mail -->
+        <a id="ctl00_SidebarLeftMenu_btnMail" class="item" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnMail&#39;,&#39;&#39;)"><i class="mail icon"></i>
+            <span class="text">E-mails <span id="ctl00_SidebarLeftMenu_lblMailIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Cloud mails</div> <span class="ui horizontal mini basic label">0</span></a>
+
+        <!-- mail/add -->
+        
+
+        <!-- dns -->
+        <a id="ctl00_SidebarLeftMenu_btnDns" class="item" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnDns&#39;,&#39;&#39;)"><i class="sitemap icon"></i>
+            <span class="text">DNS <span id="ctl00_SidebarLeftMenu_lblDnsIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">DNS management</div> <span class="ui horizontal mini basic label">0</span></a>
+
+        <!-- dns/add -->
+        
+
+        <!-- supportTicket -->
+        <a id="ctl00_SidebarLeftMenu_btnSupportTicket" class="item" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnSupportTicket&#39;,&#39;&#39;)"><i class="comments outline icon"></i>
+            <span class="text">Tickets <span id="ctl00_SidebarLeftMenu_lblSupportTicketIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Support tickets</div> <span class="ui horizontal mini basic label">0</span></a>
+
+        <!-- supportTicket/add -->
+        
+
+        <!-- billing -->
+        <a id="ctl00_SidebarLeftMenu_btnBilling" class="item" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnBilling&#39;,&#39;&#39;)"><i class="wallet icon"></i>
+            <span class="text">Billing <span id="ctl00_SidebarLeftMenu_lblBillingIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Billing management</div>
+        </a>
+
+        <!-- billing/invoice -->
+        
+
+        <!-- billing/contact -->
+        
+
+        <!-- customer -->
+        <a id="ctl00_SidebarLeftMenu_btnCustomer" class="item" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnCustomer&#39;,&#39;&#39;)"><i class="user circle icon"></i>
+            <span class="text">Customer <span id="ctl00_SidebarLeftMenu_lblCustomerIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Account management</div>
+        </a>
+
+        <!-- customer/settings -->
+        
+
+        <!-- customer/message -->
+        
+
+        <!-- customer/queue -->
+        
+
+        <div class="text item m-t-20">
+            <div class="ui tiny label pull-left">
+                <a id="ctl00_SidebarLeftMenu_btnVersion" href="javascript:__doPostBack(&#39;ctl00$SidebarLeftMenu$btnVersion&#39;,&#39;&#39;)">Version: 0.21</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+                        </div>
+
+    <div class="pusher"><form method="post" action="https://admin.monsterasp.net/app/dashboard" id="aspnetForm">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="">
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="">
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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">
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="./Admin _ MonsterASP.NET_files/WebResource.axd" type="text/javascript"></script>
+
+
+<script src="./Admin _ MonsterASP.NET_files/ScriptResource.axd" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+if (typeof(Sys) === 'undefined') throw new Error('ASP.NET Ajax client-side framework failed to load.');
+//]]>
+</script>
+
+<script src="./Admin _ MonsterASP.NET_files/ScriptResource(1).axd" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="5E64DA26">
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="">
+	<input type="hidden" name="__EVENTVALIDATION" id="__EVENTVALIDATION" value="w/Iw+4etoRJtuRBb84Llzn9K3vYKgBdiTv4ZrXpB2Fu+HHsNAHTtukH1m+Qz8qMSsVcpo4cqGDIHw9xbZ3stAxmxqAMM2pDpp+dfDDTSI6WvCrKJSwqF/EHxBXTnGVnuTfpADl659Ww7z6zOcQXQJVJ9wIEkwmv69pvf50NFyS1tZF0CbtEgIyb9ZcryHsKDHbDcVFurwfGPYchz8xN9HJsG2G/0efCtMVePEd2u9jkYt4h6lzvhO+eFkg+4N6DwE8ATPxvEk9k1hvvpZw8WjfjQcGHUOOA+QrHqQpSkwu4oAuKFmvLqHqAcx4LUC9kgj++lM7ZTfiaXxj5LVPHHknGDzSsLEhr6p3DGBli9EaUIfqZuH+q+tXjhWc7gHcFVe80cEGgL74VpJBknVIUtEm8kASQSYR7OjX2V2e8Fi/h0f6dOo4WvUwm1g49vfBPuCcQzg7zkv356IvK4F0N2O4z3C9JvAN6Zk3ArLIP+whS97fMAoG0SZerhFNfaYhXU11pwvVGo3PnwFc+FjQKJbVrYXUTd0fcEd5MVHowQLuA5Al8mPcjA6OPNVfOuvtNlCfIte5e6CxWLAHBcYGpcvKrZXFAkrf48pDQsH+2oCm85pxUSiY2P/N5vqb1T5rCllgJAGNe4ziCSeZX/c1+QGWZ5N1ZsTTv3Dtdn0ZndtQ/29512qbGnb5e0k90BX7mzyDaCDCnfDuyJPnwYtSR3mlp88xLnuR/X6MbQSB5TYQxCvEVus8q58jpkw4p6rYvd5VWMUuV6E2GWkX6nHFmA1ptBybSlLP3gGwhrApuo+JQx28ZZgNP3redOFcC2+5z++jcEOx0adnXQBrrkVTWYQZp4a+z7Aq1VnEPRFbq+XnNUvV5gLiNVCRr3y4B1EpLMj/0yRtfk2C9uYda1Wj3jbK2s9jVF0L5MpDVDYKVAmn858pLInK6xRzI0ZhHXYFsB/nGON8EZNiE3L8hnV1AB1FtHtSCLbuE9sYGrdzVJlJZDxKY2V+jFAL9JT5g4KBpiw2ZFIfsPEwkYdCWGdLOGe7wzGoBpFx2Gk+SEDIhHJ9bmqEsFAptIbi7ii9zsr2UgCb2FeUmxPz67vWbnHxFoEvSsoiPyd+MLg4E3BARJGNcqrcGG2ghmZIaVz4zO0nXIm5C48c0QzyMunechTSxnDv5uh+7vna2YYAyiN2XqyO/fmjtyU1eR51qZ6/AHHMW+9v/pR6nIqbj4p/cV7m6CcDDU+WIbBiZIZ5Tpp9Ugz4jGDGHmyy8ZJAg+VDNQgTSF">
+</div>
+            
+        <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$ScriptManager', 'aspnetForm', ['tctl00$UpdatePanel',''], [], [], 2400, 'ctl00');
+//]]>
+</script>
+
+
+        <div id="ctl00_UpdatePanel" class="update-panel">
+	
+
+                <div class="page">
+                    <div class="mobile only">
+
+                        <!-- top-sideBar -->
+                        <div id="ctl00_TopSideBar_pnlTopSidebar" class="ui secondary pointing huge menu">
+		
+    <a class="show sidebar item">
+        <i class="sidebar icon"></i> Menu
+    </a>
+    
+    <a id="ctl00_TopSideBar_btnDashboard" class="item" href="javascript:__doPostBack(&#39;ctl00$TopSideBar$btnDashboard&#39;,&#39;&#39;)">
+        <i class="home icon"></i> Dashboard
+    </a>
+    <div class="right menu">
+        <a id="ctl00_TopSideBar_btnLogout" class="item" href="javascript:__doPostBack(&#39;ctl00$TopSideBar$btnLogout&#39;,&#39;&#39;)">
+            <i class="sign out icon"></i> Logout
+        </a>
+    </div>
+
+	</div>
+
+
+                    </div>
+                    <div class="top-bar">
+
+                        <div class="ui wide padded">
+                            <div class="ui top small tabular menu computer widescreen only">
+                            
+                                <!-- topBar -->
+                                
+
+<!-- logo -->
+<a id="ctl00_TopBar_btnLogo" class="text item" href="javascript:__doPostBack(&#39;ctl00$TopBar$btnLogo&#39;,&#39;&#39;)">
+    <div class="ui grey header">
+        <i class="cloudversify icon color-blue"></i>            
+        <div class="content">
+            Monster<span class="color-blue">ASP<small>.net</small></span>
+            <div class="sub header color-black"><strong>ASP.NET</strong> &amp; <strong>.NET</strong> Cloud Hosting</div>
+        </div>
+    </div>
+</a>
+
+<div class="right menu">
+
+    <!-- queue -->
+    <a id="ctl00_TopBar_btnQueue" class="text item" href="javascript:__doPostBack(&#39;ctl00$TopBar$btnQueue&#39;,&#39;&#39;)">
+        <i class="tasks icon"></i> Tasks <span id="ctl00_TopBar_lblQueueCount" class="ui horizontal mini basic white label">0</span></a>
+
+    <!-- message -->
+    <a id="ctl00_TopBar_btnMessage" class="text item" href="javascript:__doPostBack(&#39;ctl00$TopBar$btnMessage&#39;,&#39;&#39;)">
+        <i class="envelope outline icon"></i> Messages <span id="ctl00_TopBar_lblMessageCount" class="ui horizontal mini basic orange label">3</span></a>
+
+    <!-- customer -->
+    <a id="ctl00_TopBar_btnCustomer" class="text item" href="javascript:__doPostBack(&#39;ctl00$TopBar$btnCustomer&#39;,&#39;&#39;)">
+        <div class="color-blue" style="line-height: 1;">
+            <i class="user circle icon"></i> <span id="ctl00_TopBar_lblCustomer">Mohamed Ahmed Kassem</span>
+            <div class="color-grey"><span id="ctl00_TopBar_lblEmail">mohamedahmedkassem1@gmail.com</span></div>
+        </div>
+    </a>
+
+    <!-- logout -->
+    <div class="item">
+        <a id="ctl00_TopBar_btnLogout" class="ui left labeled icon grey button" href="javascript:__doPostBack(&#39;ctl00$TopBar$btnLogout&#39;,&#39;&#39;)">
+            <i class="sign out icon"></i> Log out
+        </a>
+    </div>
+
+</div>
+
+
+                            </div>
+                        </div>
+
+                        
+
+                    </div>
+                    <div class="nav-bar">
+                        <div class="ui wide padded">
+
+                            <!-- navBar -->
+                            <div id="ctl00_NavBar_divNavigation"><div class="ui small breadcrumb">
+<div class="section">
+<a href="https://admin.monsterasp.net/app/dashboard">
+<i class="home icon"></i>
+</a>
+</div>
+<div class="divider"> / </div>
+<div class="active section">
+Dashboard
+</div>
+</div></div>
+
+
+                        </div>
+                    </div>
+                    
+                    <div class="ui wide padded">
+
+                        <div class="ui computer widescreen only">
+                            <div class="left-menu-box">
+
+                                <!-- leftMenu -->
+                                
+
+<div class="left-menu">
+    <div class="ui secondary vertical fluid small menu">
+
+        <!-- dashboard -->
+        <a id="ctl00_LeftMenu_btnDashboard" class="active item" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnDashboard&#39;,&#39;&#39;)"><i class="home icon"></i>
+            <span class="text">Dashboard</span>
+            <div class="sub text">Account overview</div>
+        </a>
+
+        <!-- subscription -->
+        <a id="ctl00_LeftMenu_btnSubscription" class="item" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnSubscription&#39;,&#39;&#39;)"><i class="cubes icon"></i>
+            <span class="text">Subscriptions <span id="ctl00_LeftMenu_lblSubscriptionIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Packages</div> <span class="ui horizontal mini basic label">0</span></a>
+
+        <!-- subscription/add -->
+        
+
+        <!-- site -->
+        <a id="ctl00_LeftMenu_btnSite" class="item" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnSite&#39;,&#39;&#39;)"><i class="desktop icon"></i>
+            <span class="text">Websites <span id="ctl00_LeftMenu_lblSiteIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Cloud websites</div> <span class="ui horizontal mini blue basic label">1</span></a>
+
+        <!-- site/add -->
+        
+
+        <!-- site/subdomain/add -->
+        
+
+        <!-- database -->
+        <a id="ctl00_LeftMenu_btnDatabase" class="item" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnDatabase&#39;,&#39;&#39;)"><i class="database icon"></i>
+            <span class="text">Databases <span id="ctl00_LeftMenu_lblDatabaseIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Cloud databases</div> <span class="ui horizontal mini blue basic label">1</span></a>
+
+        <!-- database/add -->
+        
+
+        <!-- mail -->
+        <a id="ctl00_LeftMenu_btnMail" class="item" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnMail&#39;,&#39;&#39;)"><i class="mail icon"></i>
+            <span class="text">E-mails <span id="ctl00_LeftMenu_lblMailIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Cloud mails</div> <span class="ui horizontal mini basic label">0</span></a>
+
+        <!-- mail/add -->
+        
+
+        <!-- dns -->
+        <a id="ctl00_LeftMenu_btnDns" class="item" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnDns&#39;,&#39;&#39;)"><i class="sitemap icon"></i>
+            <span class="text">DNS <span id="ctl00_LeftMenu_lblDnsIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">DNS management</div> <span class="ui horizontal mini basic label">0</span></a>
+
+        <!-- dns/add -->
+        
+
+        <!-- supportTicket -->
+        <a id="ctl00_LeftMenu_btnSupportTicket" class="item" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnSupportTicket&#39;,&#39;&#39;)"><i class="comments outline icon"></i>
+            <span class="text">Tickets <span id="ctl00_LeftMenu_lblSupportTicketIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Support tickets</div> <span class="ui horizontal mini basic label">0</span></a>
+
+        <!-- supportTicket/add -->
+        
+
+        <!-- billing -->
+        <a id="ctl00_LeftMenu_btnBilling" class="item" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnBilling&#39;,&#39;&#39;)"><i class="wallet icon"></i>
+            <span class="text">Billing <span id="ctl00_LeftMenu_lblBillingIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Billing management</div>
+        </a>
+
+        <!-- billing/invoice -->
+        
+
+        <!-- billing/contact -->
+        
+
+        <!-- customer -->
+        <a id="ctl00_LeftMenu_btnCustomer" class="item" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnCustomer&#39;,&#39;&#39;)"><i class="user circle icon"></i>
+            <span class="text">Customer <span id="ctl00_LeftMenu_lblCustomerIcon"><i class="caret right icon"></i></span></span>
+            <div class="sub text">Account management</div>
+        </a>
+
+        <!-- customer/settings -->
+        
+
+        <!-- customer/message -->
+        
+
+        <!-- customer/queue -->
+        
+
+        <div class="text item m-t-20">
+            <div class="ui tiny label pull-left">
+                <a id="ctl00_LeftMenu_btnVersion" href="javascript:__doPostBack(&#39;ctl00$LeftMenu$btnVersion&#39;,&#39;&#39;)">Version: 0.21</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+                            </div>
+                        </div>
+
+                        <!-- rightContent -->
+                        <div class="right-content">
+                        
+                            <!-- content-body -->
+                            <div class="content-body">
+
+                                
+
+    <div class="ui stackable grid">
+        <div class="sixteen wide twelve wide widescreen column">
+
+            <div class="ui small header">
+                Welcome, Mohamed Ahmed Kassem
+            </div>
+
+            <!-- welcomeMessage -->
+            <div id="ctl00_ContentPlaceHolder_WelcomeMessage_pnlMessage" class="ui warning message color-orange">
+		
+    <ul id="ctl00_ContentPlaceHolder_WelcomeMessage_lstMessage" class="ui list welcome-message">
+			<li><a href="https://admin.monsterasp.net/app/customer/message">You have unread (3) messages!</a></li>
+		</ul>
+
+	</div>
+
+
+            <!-- status -->
+            <div id="ctl00_ContentPlaceHolder_divStatusMessage"></div>
+
+            <div class="ui three stackable cards">
+
+                <!-- siteList -->
+                
+
+<div class="ui fluid small card">
+    <div class="content">
+        <div class="header">
+            <i class="desktop icon"></i>Websites <span id="ctl00_ContentPlaceHolder_SiteList_lblSiteCount" class="ui horizontal mini basic blue label absolute m-l-10">1</span>            
+        </div>
+        <div class="description">
+            
+            <div>
+		<table class="ui very basic unstackable striped compact small table m-b-20" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder_SiteList_gridList" style="border-collapse:collapse;">
+			<tbody><tr>
+				<th class="widescreen only" scope="col">Status</th><th scope="col">Name</th><th class="widescreen only text-right" scope="col">Size &nbsp;</th>
+			</tr><tr>
+				<td class="widescreen only" style="width:60px;">
+                            <span class="ui horizontal small green label">Enabled</span>
+                            
+                            
+                            
+                        </td><td class="two-items">
+
+                            <a id="ctl00_ContentPlaceHolder_SiteList_gridList_ctl02_btnManage1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$SiteList$gridList$ctl02$btnManage1&#39;,&#39;&#39;)">
+                        
+                                    <div><span class="">gatoapp.runasp.net <i class="wrench small icon"></i></span> &nbsp; </div>
+                                    <div class="color-black text-small">--- &nbsp; <span class="color-red">Free: site18118</span></div>
+
+                            </a>                    
+
+                        </td><td class="widescreen only text-right" style="width:100px;">
+                            0 / 5120 <small>MB</small>
+                        </td>
+			</tr>
+		</tbody></table>
+	</div>
+
+            <a id="ctl00_ContentPlaceHolder_SiteList_btnShowAll" class="ui bottom left attached tiny label color-blue" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$SiteList$btnShowAll&#39;,&#39;&#39;)">Show all <i class="right arrow icon"></i></a>
+            <a id="ctl00_ContentPlaceHolder_SiteList_btnAdd" class="ui bottom right attached tiny label color-teal" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$SiteList$btnAdd&#39;,&#39;&#39;)"><i class="plus icon"></i> Add Website</a>
+
+        </div>
+
+    </div>
+</div>
+
+
+                <!-- databaseList -->
+                
+
+<div class="ui fluid small card">
+    <div class="content">
+        <div class="header">
+            <i class="database icon"></i>Databases <span id="ctl00_ContentPlaceHolder_DatabaseList_lblDatabaseCount" class="ui horizontal mini basic blue label absolute m-l-10">1</span>            
+        </div>
+        <div class="description">
+            
+            <div>
+		<table class="ui very basic unstackable striped compact small table m-b-20" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder_DatabaseList_gridList" style="border-collapse:collapse;">
+			<tbody><tr>
+				<th class="widescreen only" scope="col">Status</th><th class="widescreen only" scope="col">Type</th><th scope="col">Name</th><th class="widescreen only text-right" scope="col">Size &nbsp;</th>
+			</tr><tr>
+				<td class="widescreen only" style="width:80px;">
+                            <span class="ui horizontal small green label">Enabled</span>
+                            
+                            
+                        </td><td class="widescreen only" style="width:90px;">
+                            
+                            <img src="./Admin _ MonsterASP.NET_files/mssql_icon_16.png" alt="mssql" class="mssql-icon">
+                            MSSQL
+                        </td><td class="two-items">
+
+                            <a id="ctl00_ContentPlaceHolder_DatabaseList_gridList_ctl02_btnManage1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$DatabaseList$gridList$ctl02$btnManage1&#39;,&#39;&#39;)">
+
+                                    <div><span class="">db14034.databaseasp.net <i class="wrench small icon"></i></span></div>
+                                    <div class="color-black text-small">--- &nbsp; <span class="color-red">Free: db14034</span></div>
+
+                            </a>                    
+
+                        </td><td class="widescreen only text-right" style="width:100px;">
+                            8 / 1024 <small>MB</small>
+                        </td>
+			</tr>
+		</tbody></table>
+	</div>
+
+            <a id="ctl00_ContentPlaceHolder_DatabaseList_btnShowAll" class="ui bottom left attached tiny label color-blue" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$DatabaseList$btnShowAll&#39;,&#39;&#39;)">Show all <i class="right arrow icon"></i></a>
+            <a id="ctl00_ContentPlaceHolder_DatabaseList_btnAdd" class="ui bottom right attached tiny label color-teal" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$DatabaseList$btnAdd&#39;,&#39;&#39;)"><i class="plus icon"></i> Add Database</a>
+
+        </div>
+
+    </div>
+</div>
+
+
+                <!-- mailList -->
+                
+
+<div class="ui fluid small card">
+    <div class="content">
+        <div class="header">
+            <i class="mail icon"></i>E-mails <span id="ctl00_ContentPlaceHolder_MailList_lblMailCount" class="ui horizontal mini basic white label absolute m-l-10">0</span>            
+        </div>
+        <div class="description">
+            
+            <div>
+		<table class="ui very basic unstackable striped compact small table m-b-20" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder_MailList_gridList" style="border-collapse:collapse;">
+			<tbody><tr>
+				<td colspan="3">
+                    <i class="exclamation triangle icon"></i> This list is empty!
+                </td>
+			</tr>
+		</tbody></table>
+	</div>
+
+            <a id="ctl00_ContentPlaceHolder_MailList_btnShowAll" class="ui bottom left attached tiny label color-blue" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$MailList$btnShowAll&#39;,&#39;&#39;)">Show all <i class="right arrow icon"></i></a>
+            <a id="ctl00_ContentPlaceHolder_MailList_btnAdd" class="ui bottom right attached tiny label color-teal" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$MailList$btnAdd&#39;,&#39;&#39;)"><i class="plus icon"></i> Add E-mail</a>
+
+        </div>
+
+    </div>
+</div>
+
+
+            </div>
+
+            <div class="ui three stackable cards">
+
+                <!-- subscriptionList -->
+                
+
+<div class="ui fluid small card">
+    <div class="content">
+        <div class="header">
+            <i class="cubes icon"></i>Subscriptions <span id="ctl00_ContentPlaceHolder_SubscriptionList_lblCount" class="ui horizontal mini basic white label absolute m-l-10">0</span>
+        </div>        
+        <div class="description">
+            
+            <div>
+		<table class="ui very basic unstackable striped compact small table m-b-20" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder_SubscriptionList_gridList" style="border-collapse:collapse;">
+			<tbody><tr>
+				<td colspan="4">
+                    <i class="exclamation triangle icon"></i> This list is empty!
+                </td>
+			</tr>
+		</tbody></table>
+	</div>
+
+            <a id="ctl00_ContentPlaceHolder_SubscriptionList_btnShowAll" class="ui bottom left attached tiny label color-blue" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$SubscriptionList$btnShowAll&#39;,&#39;&#39;)">Show all <i class="right arrow icon"></i></a>
+            <a id="ctl00_ContentPlaceHolder_SubscriptionList_btnAdd" class="ui bottom right attached tiny label color-teal" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$SubscriptionList$btnAdd&#39;,&#39;&#39;)"><i class="cart icon"></i> Buy Premium</a>
+
+        </div>
+        
+    </div>
+</div>
+
+
+                <!-- supportTicketList -->
+                
+
+<div class="ui fluid small card">
+    <div class="content">
+        <div class="header">
+            <i class="comments outline icon"></i>Support tickets <span id="ctl00_ContentPlaceHolder_SupportTicketList_lblTicketCount" class="ui horizontal mini basic white label absolute m-l-10">0</span>            
+        </div>
+        <div class="description">
+            
+            <div>
+		<table class="ui very basic unstackable striped compact small table m-b-20" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder_SupportTicketList_gridList" style="border-collapse:collapse;">
+			<tbody><tr>
+				<td colspan="3">
+                    <i class="exclamation triangle icon"></i> This list is empty!
+                </td>
+			</tr>
+		</tbody></table>
+	</div>
+
+            <a id="ctl00_ContentPlaceHolder_SupportTicketList_btnShowAll" class="ui bottom left attached tiny label color-blue" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$SupportTicketList$btnShowAll&#39;,&#39;&#39;)">Show all <i class="right arrow icon"></i></a>
+            <a id="ctl00_ContentPlaceHolder_SupportTicketList_btnAdd" class="ui bottom right attached tiny label color-teal" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$SupportTicketList$btnAdd&#39;,&#39;&#39;)"><i class="plus icon"></i> Open Ticket</a>
+
+        </div>
+
+    </div>
+</div>
+
+
+                <!-- messageList -->
+                
+
+<div class="ui fluid small card">
+    <div class="content">
+        <div class="header">
+            <i class="envelope outline icon"></i>Unread messages <span id="ctl00_ContentPlaceHolder_MessageList_lblMessageCount" class="ui horizontal mini basic orange label absolute m-l-10">3</span>
+        </div>        
+        <div class="description">
+            
+            <div>
+		<table class="ui very basic unstackable striped compact small table m-b-20" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder_MessageList_gridList" style="border-collapse:collapse;">
+			<tbody><tr>
+				<th scope="col">Subject</th><th class="widescreen only text-right" scope="col">Age &nbsp;</th>
+			</tr><tr>
+				<td>
+
+                            <a id="ctl00_ContentPlaceHolder_MessageList_gridList_ctl02_btnView1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$MessageList$gridList$ctl02$btnView1&#39;,&#39;&#39;)">
+                    
+                                    <div><span class="color-orange text-bold">New MSSQL database <i class="eye small icon"></i></span></div>
+
+                            </a>
+
+                        </td><td class="widescreen only text-right" style="width:55px;">
+                            <small><span class="color-red">2h</span></small>
+                        </td>
+			</tr><tr>
+				<td>
+
+                            <a id="ctl00_ContentPlaceHolder_MessageList_gridList_ctl03_btnView1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$MessageList$gridList$ctl03$btnView1&#39;,&#39;&#39;)">
+                    
+                                    <div><span class="color-orange text-bold">New Website <i class="eye small icon"></i></span></div>
+
+                            </a>
+
+                        </td><td class="widescreen only text-right" style="width:55px;">
+                            <small><span class="color-red">2h</span></small>
+                        </td>
+			</tr><tr>
+				<td>
+
+                            <a id="ctl00_ContentPlaceHolder_MessageList_gridList_ctl04_btnView1" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$MessageList$gridList$ctl04$btnView1&#39;,&#39;&#39;)">
+                    
+                                    <div><span class="color-orange text-bold">Login details and Verification <i class="eye small icon"></i></span></div>
+
+                            </a>
+
+                        </td><td class="widescreen only text-right" style="width:55px;">
+                            <small><span class="color-red">2h</span></small>
+                        </td>
+			</tr>
+		</tbody></table>
+	</div>
+
+            <a id="ctl00_ContentPlaceHolder_MessageList_btnShowAll" class="ui bottom left attached tiny label color-blue" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$MessageList$btnShowAll&#39;,&#39;&#39;)">Show all <i class="right arrow icon"></i></a>
+
+        </div>
+        
+    </div>
+</div>
+
+
+            </div>
+
+            <div class="ui hidden divider"></div>
+
+            <div class="ui stackable grid">
+                <div class="eight wide column">
+
+                    <h4 class="ui grey header">
+                        Services and Products
+                    </h4>
+
+                    <div class="menu-button">
+
+                        <!-- site -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnSite" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnSite&#39;,&#39;&#39;)">
+                                <i class="big desktop icon"></i>
+                                <div class="text-name">Websites</div>
+                                <div class="description">Cloud websites</div>
+                                <span class="ui floating mini blue circular label">1</span></a>
+                        </div>
+
+                        <!-- database -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnDatabase" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnDatabase&#39;,&#39;&#39;)">
+                                <i class="big database icon"></i>
+                                <div class="text-name">Databases</div>
+                                <div class="description">Cloud databases</div>
+                                <span class="ui floating mini blue circular label">1</span></a>
+                        </div>
+
+                        <!-- mail -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnMail" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnMail&#39;,&#39;&#39;)">
+                                <i class="big mail icon"></i>
+                                <div class="text-name">E-mails</div>
+                                <div class="description">Cloud mails</div>
+                                <span class="ui floating mini circular label">0</span></a>
+                        </div>
+
+                        <!-- dns -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnDns" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnDns&#39;,&#39;&#39;)">
+                                <i class="big sitemap icon"></i>
+                                <div class="text-name">DNS</div>
+                                <div class="description">management</div>
+                                <span class="ui floating mini circular label">0</span></a>
+                        </div>
+
+                    </div>
+
+                    <h4 class="ui grey header">
+                        Customer account
+                    </h4>
+
+                    <div class="menu-button">
+
+                        <!-- settings -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnSettings" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnSettings&#39;,&#39;&#39;)">
+                                <i class="big cogs icon"></i>
+                                <div class="text-name">Settings</div>
+                                <div class="description">Account settings</div>
+                            </a>
+                        </div>
+
+                        <!-- message -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnMessage" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnMessage&#39;,&#39;&#39;)">
+                                <i class="big envelope outline icon"></i>
+                                <div class="text-name">Messages</div>
+                                <div class="description">and notifications</div>
+                                <span class="ui floating mini orange circular label">3</span></a>
+                        </div>
+
+                        <!-- queue -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnQueue" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnQueue&#39;,&#39;&#39;)">
+                                <i class="big tasks icon"></i>
+                                <div class="text-name">Tasks</div>
+                                <div class="description">Tasks queue</div>
+                                <span class="ui floating mini circular label">0</span></a>
+                        </div>
+
+                    </div>
+
+                </div>
+                <div class="eight wide column">
+
+                    <h4 class="ui grey header">
+                        Billing and Invoices
+                    </h4>
+
+                    <div class="menu-button">
+
+                        <!-- subscription -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnSubscription" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnSubscription&#39;,&#39;&#39;)">
+                                <i class="big cubes icon"></i>
+                                <div class="text-name">Subscriptions</div>
+                                <div class="description">Packages</div>
+                                <span class="ui floating mini circular label">0</span></a>
+                        </div>
+
+                        <!-- invoice -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnInvoice" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnInvoice&#39;,&#39;&#39;)">
+                                <i class="big file invoice icon"></i>
+                                <div class="text-name">Invoices</div>
+                                <div class="description">Billing invoices</div>
+                                <span class="ui floating mini circular label">0</span></a>
+                        </div>
+
+                        <!-- contacts -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnBillingContact" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnBillingContact&#39;,&#39;&#39;)">
+                                <i class="big address card icon"></i>
+                                <div class="text-name">Contacts</div>
+                                <div class="description">Billing contacts</div>
+                                <span class="ui floating mini circular label">--</span></a>
+                        </div>
+
+                    </div>
+
+                    <h4 class="ui grey header">
+                        Support
+                    </h4>
+
+                    <div class="menu-button">
+
+                        <!-- supportTicket -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_btnSupportTicket" class="ui icon button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$btnSupportTicket&#39;,&#39;&#39;)">
+                                <i class="big comments outline icon"></i>
+                                <div class="text-name">Tickets</div>
+                                <div class="description">Support tickets</div>
+                                <span class="ui floating mini circular label">0</span></a>
+                        </div>
+
+                        <!-- help -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_lnkHelp" class="ui icon button" href="https://help.monsterasp.net/" target="_blank">
+                                <i class="big book icon"></i>
+                                <div class="text-name">Help</div>
+                                <div class="description">Documentation</div>
+                                <span class="ui floating mini teal label">Open</span>
+                            </a>
+                        </div>
+
+                        <!-- forum -->
+                        <div class="item">
+                            <a id="ctl00_ContentPlaceHolder_lnkForum" class="ui icon button" href="https://admin.monsterasp.net/app/dashboard/forum" target="_blank">                        
+                                <i class="big comment dots outline icon"></i>
+                                <div class="text-name">Forum</div>
+                                <div class="description">Community</div>
+                                <span class="ui floating mini teal label">Open</span>
+                            </a>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="sixteen wide four wide widescreen column">            
+
+            <!-- discusionList -->
+            
+
+<div class="ui header m-b-0">
+    <div class="content">
+        Forum and News
+        <div class="sub header text-bold color-grey">Latest news from community</div>
+    </div>
+</div>
+
+<div class="ui divider"></div>
+
+<div>
+		<table class="ui very basic unstackable striped compact small table" cellspacing="0" rules="all" border="1" id="ctl00_ContentPlaceHolder_DiscusionList_gridList" style="border-collapse:collapse;">
+			<tbody><tr>
+				<th scope="col">Title</th><th class="widescreen only" scope="col">Date</th>
+			</tr><tr>
+				<td>
+
+                <a id="ctl00_ContentPlaceHolder_DiscusionList_gridList_ctl02_lnkForum" href="https://admin.monsterasp.net/app/dashboard/forum" target="_blank">🔹 Introducing a New Task Scheduler for Websites and Databases! 🔹 &nbsp; <span class="ui horizontal tiny color-blue label"><i class="eye small icon"></i>view</span>
+
+                </a>
+
+            </td><td class="widescreen only" style="width:55px;">
+                <small><span class="color-green">2 days</span></small>
+            </td>
+			</tr><tr>
+				<td>
+
+                <a id="ctl00_ContentPlaceHolder_DiscusionList_gridList_ctl03_lnkForum" href="https://admin.monsterasp.net/app/dashboard/forum" target="_blank">Problem deploying using FTP &nbsp; <span class="ui horizontal tiny color-blue label"><i class="eye small icon"></i>view</span>
+
+                </a>
+
+            </td><td class="widescreen only" style="width:55px;">
+                <small><span class="color-green">4 days</span></small>
+            </td>
+			</tr><tr>
+				<td>
+
+                <a id="ctl00_ContentPlaceHolder_DiscusionList_gridList_ctl04_lnkForum" href="https://admin.monsterasp.net/app/dashboard/forum" target="_blank">403.14 &nbsp; <span class="ui horizontal tiny color-blue label"><i class="eye small icon"></i>view</span>
+
+                </a>
+
+            </td><td class="widescreen only" style="width:55px;">
+                <small><span class="color-green">4 days</span></small>
+            </td>
+			</tr><tr>
+				<td>
+
+                <a id="ctl00_ContentPlaceHolder_DiscusionList_gridList_ctl05_lnkForum" href="https://admin.monsterasp.net/app/dashboard/forum" target="_blank">WordPress installing profile &nbsp; <span class="ui horizontal tiny color-blue label"><i class="eye small icon"></i>view</span>
+
+                </a>
+
+            </td><td class="widescreen only" style="width:55px;">
+                <small><span class="color-grey">9 days</span></small>
+            </td>
+			</tr><tr>
+				<td>
+
+                <a id="ctl00_ContentPlaceHolder_DiscusionList_gridList_ctl06_lnkForum" href="https://admin.monsterasp.net/app/dashboard/forum" target="_blank">Celebrating: One Year Anniversary 🥇  &nbsp; <span class="ui horizontal tiny color-blue label"><i class="eye small icon"></i>view</span>
+
+                </a>
+
+            </td><td class="widescreen only" style="width:55px;">
+                <small><span class="color-grey">14 days</span></small>
+            </td>
+			</tr>
+		</tbody></table>
+	</div>
+            
+
+            <!-- countInfo -->
+            
+
+<div class="ui header m-b-0">
+    <div class="content">
+        Overview
+        <div class="sub header text-bold color-grey">Account overview</div>
+    </div>
+</div>
+
+<table class="ui very basic unstackable small table name">
+    <tbody><tr><td></td><td>Used &nbsp;/&nbsp; Available</td></tr>
+    <tr><td>Subscriptions</td><td><span id="ctl00_ContentPlaceHolder_CountInfo_lblCountSubscriptionPremium"><span class="ui horizontal mini basic label">0</span></span> /&nbsp; <span id="ctl00_ContentPlaceHolder_CountInfo_lblCountSubscriptionPremiumAvailable"><span class="ui horizontal mini basic label">--</span></span></td></tr>
+    <tr><td><span class="color-green">PREMIUM</span> Websites</td><td><span id="ctl00_ContentPlaceHolder_CountInfo_lblCountSitePremium"><span class="ui horizontal mini basic label">0</span></span> /&nbsp; <span id="ctl00_ContentPlaceHolder_CountInfo_lblCountSitePremiumAvailable"><span class="ui horizontal mini basic label">0</span></span></td></tr>
+    <tr><td><span class="color-green">PREMIUM</span> Subdomains</td><td><span id="ctl00_ContentPlaceHolder_CountInfo_lblCountSubdomainPremium"><span class="ui horizontal mini basic label">0</span></span> /&nbsp; <span id="ctl00_ContentPlaceHolder_CountInfo_lblCountSubdomainPremiumAvailable"><span class="ui horizontal mini basic label">0</span></span></td></tr>
+    <tr><td><span class="color-green">PREMIUM</span> Databases</td><td><span id="ctl00_ContentPlaceHolder_CountInfo_lblCountDatabasePremium"><span class="ui horizontal mini basic label">0</span></span> /&nbsp; <span id="ctl00_ContentPlaceHolder_CountInfo_lblCountDatabasePremiumAvailable"><span class="ui horizontal mini basic label">0</span></span></td></tr>
+    <tr><td><span class="color-green">PREMIUM</span> E-mails</td><td><span id="ctl00_ContentPlaceHolder_CountInfo_lblCountMailPremium"><span class="ui horizontal mini basic label">0</span></span> /&nbsp; <span id="ctl00_ContentPlaceHolder_CountInfo_lblCountMailPremiumAvailable"><span class="ui horizontal mini basic label">0</span></span></td></tr>
+    <tr><td><span class="color-red">FREE</span> Websites</td><td><span id="ctl00_ContentPlaceHolder_CountInfo_lblCountSiteFree"><span class="ui horizontal mini blue basic label">1</span></span> /&nbsp; <span id="ctl00_ContentPlaceHolder_CountInfo_lblCountSiteFreeAvailable"><span class="ui horizontal mini green basic label">4</span></span></td></tr>
+    <tr><td><span class="color-red">FREE</span> Databases</td><td><span id="ctl00_ContentPlaceHolder_CountInfo_lblCountDatabaseFree"><span class="ui horizontal mini blue basic label">1</span></span> /&nbsp; <span id="ctl00_ContentPlaceHolder_CountInfo_lblCountDatabaseFreeAvailable"><span class="ui horizontal mini green basic label">4</span></span></td></tr>
+</tbody></table>
+
+            <!-- customerInfo -->
+            
+
+<div class="ui header m-b-0">
+    <div class="content">
+        Customer
+        <div class="sub header text-bold color-grey">Account owner and settings</div>
+    </div>
+</div>
+
+<div class="ui divider"></div>
+
+<div class="ui small header m-t-0 m-b-0">
+    <i class="user tie grey icon"></i>
+    <div class="content">
+        <span id="ctl00_ContentPlaceHolder_CustomerInfo_lblName">Mohamed Ahmed Kassem</span>
+        <div class="sub header"><span id="ctl00_ContentPlaceHolder_CustomerInfo_lblEmail">mohamedahmedkassem1@gmail.com</span></div>
+    </div>
+</div>
+
+<table class="ui very basic unstackable small table name m-t-5">
+    <tbody><tr><td>Mobile</td><td class="two-items"><span id="ctl00_ContentPlaceHolder_CustomerInfo_lblPhoneNumber">+201157643117</span><br><span id="ctl00_ContentPlaceHolder_CustomerInfo_lblPhoneNumberReputation" class="text-small color-green"><i class="check icon"></i> Phone number is correct and valid</span></td></tr>
+    <tr><td>Country</td><td><span id="ctl00_ContentPlaceHolder_CustomerInfo_lblCountry">Egypt [EG]</span>&nbsp;<span id="ctl00_ContentPlaceHolder_CustomerInfo_lblCountryFlag"><i class="eg flag"></i></span></td></tr>
+    <tr><td>Language</td><td><span id="ctl00_ContentPlaceHolder_CustomerInfo_lblLanguage">English [EN]</span>&nbsp;<span id="ctl00_ContentPlaceHolder_CustomerInfo_lblLanguageFlag"><i class="us flag"></i></span></td></tr>
+    <tr><td>Currency</td><td><span id="ctl00_ContentPlaceHolder_CustomerInfo_lblCurrency">USD <i class="usd sign icon"></i></span></td></tr>
+</tbody></table>
+
+<a id="ctl00_ContentPlaceHolder_CustomerInfo_btnUpdate" class="ui blue labeled icon small button" href="javascript:__doPostBack(&#39;ctl00$ContentPlaceHolder$CustomerInfo$btnUpdate&#39;,&#39;&#39;)">
+    <i class="edit icon"></i> Update info
+</a>
+
+
+            <!-- billingnfo -->
+            
+
+<div class="ui header m-b-0">
+    <div class="content">
+        Billing
+        <div class="sub header text-bold color-grey">Account billing details</div>
+    </div>
+</div>
+
+<div class="ui divider"></div>
+
+<div class="ui small header m-t-0 m-b-0">
+    <i class="address card grey icon"></i>
+    <div class="content">
+        <span id="ctl00_ContentPlaceHolder_BillingInfo_lblName">---</span>
+        <div class="sub header"><span id="ctl00_ContentPlaceHolder_BillingInfo_lblEmail">---</span></div>
+    </div>
+</div>
+
+<table class="ui very basic unstackable small table name m-t-5">
+    <tbody><tr><td>Address</td><td><span id="ctl00_ContentPlaceHolder_BillingInfo_lblAddress">---</span></td></tr>
+    <tr><td>City</td><td><span id="ctl00_ContentPlaceHolder_BillingInfo_lblCity">---</span></td></tr>
+    <tr><td>Zip</td><td><span id="ctl00_ContentPlaceHolder_BillingInfo_lblZip">---</span></td></tr>
+    <tr><td>Country</td><td><span id="ctl00_ContentPlaceHolder_BillingInfo_lblCountry">---</span>&nbsp;<span id="ctl00_ContentPlaceHolder_BillingInfo_lblCountryFlag"></span></td></tr>    
+    <tr><td>Reg.Number</td><td><span id="ctl00_ContentPlaceHolder_BillingInfo_lblBillingRegNumber">---</span></td></tr>
+    <tr><td>Vat.Number</td><td><span id="ctl00_ContentPlaceHolder_BillingInfo_lblBillingVatNumber">---</span></td></tr>
+    <tr><td>Currency</td><td><span id="ctl00_ContentPlaceHolder_BillingInfo_lblBillingCurrency">---</span></td></tr>
+</tbody></table>
+
+
+        </div>
+    </div>
+
+
+
+                            </div>
+
+                        </div>
+                    </div>
+
+                </div>
+
+            
+</div>
+
+        <!-- ajaxLoader -->
+        <div id="ctl00_UpdateProgress" style="display:none;" role="status" aria-hidden="true">
+	
+
+                <div class="ui active inverted dimmer">
+                    <div class="ui large text loader">Please wait . . .</div>
+                </div>
+
+            
+</div>
+
+    
+
+<script type="text/javascript">
+//<![CDATA[
+Sys.Application.add_init(function() {
+    $create(Sys.UI._UpdateProgress, {"associatedUpdatePanelId":null,"displayAfter":500,"dynamicLayout":true}, null, null, $get("ctl00_UpdateProgress"));
+});
+//]]>
+</script>
+</form></div>
+
+    <script src="./Admin _ MonsterASP.NET_files/main.js.download"></script>
+
+
+</body></html>

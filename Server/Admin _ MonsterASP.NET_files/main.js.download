@@ -1,0 +1,55 @@
+﻿
+// disable multiple ASP.NET postback
+function pageLoad() {
+    Page = Sys.WebForms.PageRequestManager.getInstance();
+    Page.add_initializeRequest(OnInitializeRequest);
+}
+
+function OnInitializeRequest(sender, args) {
+    var postBackElement = args.get_postBackElement();
+
+    if (Page.get_isInAsyncPostBack()) {
+        alert('Please wait! Previous request is still running... ');
+        args.set_cancel(true);
+    }
+}
+
+$(document).ready(function () {
+
+    // sidebar
+    $('.ui.vertical.sidebar.menu')
+        .sidebar('setting', 'transition', 'overlay')
+        .sidebar('attach events', '.show.sidebar.item');
+
+    // tooltip
+    $('[data-toggle="tooltip"]').popup({
+        inline: true
+    });
+
+    // accordion
+    $('.ui.accordion').accordion();
+
+});
+
+Sys.WebForms.PageRequestManager.getInstance().add_endRequest(function () {
+
+    // sidebar
+    $('.ui.vertical.sidebar.menu')
+        .sidebar('setting', 'transition', 'overlay')
+        .sidebar('attach events', '.show.sidebar.item');
+
+    // tooltip
+    $('[data-toggle="tooltip"]').popup({
+        inline: true
+    });
+
+    // accordion
+    $('.ui.accordion').accordion();
+
+});
+
+// sanitize input
+function sanitizeText(input) {
+    var sanitizedText = input.value.replace(/[<>&'"´]/g, '');
+    input.value = sanitizedText;
+}
