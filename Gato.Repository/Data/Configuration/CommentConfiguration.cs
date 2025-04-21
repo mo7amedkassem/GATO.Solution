@@ -22,17 +22,22 @@ namespace Gato.Repository.Data.Configuration
             builder.HasQueryFilter(x => !x.IsDeleted);
 
 
+            builder.Property(c => c.UserId)
+            .IsRequired(false); // Allow null values
+
             // if post delete => commemnt also delete 
 
-            //builder.HasOne(c => c.Post).
-            //    WithMany(p => p.Comments).
-            //    HasForeignKey(c => c.PostId)
-            //   .OnDelete(DeleteBehavior.NoAction);
+            builder.HasOne(c => c.Post).
+                WithMany(p => p.Comments).
+                HasForeignKey(c => c.PostId)
+               .OnDelete(DeleteBehavior.Cascade);
 
-            builder.HasOne(c => c.User)
-            .WithMany(u => u.Comments)
-            .HasForeignKey(c => c.UserId)
-            .OnDelete(DeleteBehavior.Cascade);
+            //builder.HasOne(c => c.User)
+            //.WithMany(u => u.Comments)
+            //.HasForeignKey(c => c.UserId)
+            //.OnDelete(DeleteBehavior.NoAction);
+
+            
             
 
         }

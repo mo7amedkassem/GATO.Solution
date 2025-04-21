@@ -68,18 +68,30 @@ namespace GATO.Controllers
         [HttpDelete("{id}")]
         public async Task<IActionResult> DeleteLikeForComments(int id)
         {
-            var like = await _context.likes.FindAsync(id);
+            var like = await _context.likes_Comments.FindAsync(id);
             if (like == null)
             {
                 throw new Exception("Like Not Found");
             }
             like.IsDeleted = true;
-            _context.likes.Update(like);
+            _context.likes_Comments.Update(like);
             await _context.SaveChangesAsync();
             return NoContent();
         }
 
-
+        [HttpDelete("{Post_id}")]
+        public async Task<IActionResult> DeleteLikeForposts(int id)
+        {
+            var like = await _context.likes_Posts.FindAsync(id);
+            if (like == null)
+            {
+                throw new Exception("Like Not Found");
+            }
+            like.IsDeleted = true;
+            _context.likes_Posts.Update(like);
+            await _context.SaveChangesAsync();
+            return NoContent();
+        }
 
     }
 }

@@ -19,10 +19,10 @@ namespace Gato.Repository.Data.Configuration
             builder.HasQueryFilter(x => !x.IsDeleted);
 
 
-            builder.HasOne(p => p.User)
-                .WithMany(u => u.Posts)
-                .HasForeignKey(p => p.UserId)
-                .OnDelete(DeleteBehavior.Restrict);
+            //builder.HasOne(p => p.User)
+            //    .WithMany(u => u.Posts)
+            //    .HasForeignKey(p => p.UserId)
+            //    .OnDelete(DeleteBehavior.NoAction);
 
 
         }

@@ -22,7 +22,7 @@ namespace Gato.Repository.Data.Migrations
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("Gato.Core.Entities.Like", b =>
+            modelBuilder.Entity("Gato.Core.Entities.Like_Comment", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -36,8 +36,33 @@ namespace Gato.Repository.Data.Migrations
                     b.Property<DateTime>("CreatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("CreatedBy")
-                        .HasColumnType("nvarchar(max)");
+                    b.Property<bool>("IsDeleted")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("bit")
+                        .HasDefaultValue(false);
+
+                    b.Property<int?>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("CommentId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("likes_Comments");
+                });
+
+            modelBuilder.Entity("Gato.Core.Entities.Like_Post", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
 
                     b.Property<bool>("IsDeleted")
                         .ValueGeneratedOnAdd()
@@ -47,31 +72,42 @@ namespace Gato.Repository.Data.Migrations
                     b.Property<int?>("PostId")
                         .HasColumnType("int");
 
-                    b.Property<DateTime?>("UpdatedAt")
-                        .HasColumnType("datetime2");
-
-                    b.Property<string>("UpdatedBy")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<int?>("UserId")
-                        .IsRequired()
                         .HasColumnType("int");
 
                     b.HasKey("Id");
 
-                    b.HasIndex("CommentId");
+                    b.HasIndex("PostId");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("likes_Posts");
+                });
+
+            modelBuilder.Entity("Gato.Core.Entities.Saved_Posts", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int?>("PostId")
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("SavedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("UserId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
 
                     b.HasIndex("PostId");
 
-                    b.HasIndex("UserId", "CommentId")
-                        .IsUnique()
-                        .HasFilter("[UserId] IS NOT NULL AND [CommentId] IS NOT NULL");
+                    b.HasIndex("UserId");
 
-                    b.HasIndex("UserId", "PostId")
-                        .IsUnique()
-                        .HasFilter("[UserId] IS NOT NULL AND [PostId] IS NOT NULL");
-
-                    b.ToTable("likes");
+                    b.ToTable("savedposts");
                 });
 
             modelBuilder.Entity("Gato.Repository.Entities.Comment", b =>
@@ -106,7 +142,7 @@ namespace Gato.Repository.Data.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -147,7 +183,7 @@ namespace Gato.Repository.Data.Migrations
                     b.Property<string>("UpdatedBy")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<int>("UserId")
+                    b.Property<int?>("UserId")
                         .HasColumnType("int");
 
                     b.HasKey("Id");
@@ -175,6 +211,10 @@ namespace Gato.Repository.Data.Migrations
                         .HasColumnType("datetime2");
 
                     b.Property<string>("CreatedBy")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("DisplayName")
+                        .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")
@@ -230,44 +270,66 @@ namespace Gato.Repository.Data.Migrations
                     b.ToTable("Users");
                 });
 
-            modelBuilder.Entity("Gato.Core.Entities.Like", b =>
+            modelBuilder.Entity("Gato.Core.Entities.Like_Comment", b =>
                 {
                     b.HasOne("Gato.Repository.Entities.Comment", "comment")
                         .WithMany("likes")
                         .HasForeignKey("CommentId")
-                        .OnDelete(DeleteBehavior.Restrict);
-
-                    b.HasOne("Gato.Repository.Entities.Post", "post")
-                        .WithMany("likes")
-                        .HasForeignKey("PostId")
-                        .OnDelete(DeleteBehavior.Restrict);
+                        .OnDelete(DeleteBehavior.Cascade);
 
                     b.HasOne("Gato.Repository.Entities.User", "user")
-                        .WithMany("likes")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("UserId");
 
                     b.Navigation("comment");
+
+                    b.Navigation("user");
+                });
+
+            modelBuilder.Entity("Gato.Core.Entities.Like_Post", b =>
+                {
+                    b.HasOne("Gato.Repository.Entities.Post", "post")
+                        .WithMany("likes_posts")
+                        .HasForeignKey("PostId")
+                        .OnDelete(DeleteBehavior.Cascade);
+
+                    b.HasOne("Gato.Repository.Entities.User", "user")
+                        .WithMany()
+                        .HasForeignKey("UserId");
 
                     b.Navigation("post");
 
                     b.Navigation("user");
                 });
 
+            modelBuilder.Entity("Gato.Core.Entities.Saved_Posts", b =>
+                {
+                    b.HasOne("Gato.Repository.Entities.Post", "Post")
+                        .WithMany("savedposts")
+                        .HasForeignKey("PostId");
+
+                    b.HasOne("Gato.Repository.Entities.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Post");
+
+                    b.Navigation("User");
+                });
+
             modelBuilder.Entity("Gato.Repository.Entities.Comment", b =>
                 {
                     b.HasOne("Gato.Repository.Entities.Post", "Post")
-                        .WithMany()
+                        .WithMany("Comments")
                         .HasForeignKey("PostId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("Gato.Repository.Entities.User", "User")
-                        .WithMany("Comments")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.NoAction)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("UserId");
 
                     b.Navigation("Post");
 
@@ -277,10 +339,8 @@ namespace Gato.Repository.Data.Migrations
             modelBuilder.Entity("Gato.Repository.Entities.Post", b =>
                 {
                     b.HasOne("Gato.Repository.Entities.User", "User")
-                        .WithMany("Posts")
-                        .HasForeignKey("UserId")
-                        .OnDelete(DeleteBehavior.Restrict)
-                        .IsRequired();
+                        .WithMany()
+                        .HasForeignKey("UserId");
 
                     b.Navigation("User");
                 });
@@ -292,16 +352,11 @@ namespace Gato.Repository.Data.Migrations
 
             modelBuilder.Entity("Gato.Repository.Entities.Post", b =>
                 {
-                    b.Navigation("likes");
-                });
-
-            modelBuilder.Entity("Gato.Repository.Entities.User", b =>
-                {
                     b.Navigation("Comments");
 
-                    b.Navigation("Posts");
+                    b.Navigation("likes_posts");
 
-                    b.Navigation("likes");
+                    b.Navigation("savedposts");
                 });
 #pragma warning restore 612, 618
         }

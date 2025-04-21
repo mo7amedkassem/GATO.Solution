@@ -1,8 +1,12 @@
 using Gato.Core.IRepositories;
+using Gato.Core.Service_Contract;
 using Gato.Repository.Data;
+using Gato.Repository.Entities;
 using Gato.Repository.identity;
 using Gato.Repository.Repositories;
+using Gato.Service;
 using GATO.Helpers;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 
@@ -24,11 +28,20 @@ namespace GATO
                                                                                 
                 Options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection"));
             });
+
             builder.Services.AddDbContext<AppIdentityDBContext>(Options =>
             {
                 Options.UseSqlServer(builder.Configuration.GetConnectionString("IdentityConnection"));
             });
 
+            builder.Services.AddIdentity<User, IdentityRole<int>>(options =>
+            {
+                options.Tokens.EmailConfirmationTokenProvider = TokenOptions.DefaultEmailProvider;
+                options.Tokens.PasswordResetTokenProvider = TokenOptions.DefaultEmailProvider;
+                options.SignIn.RequireConfirmedEmail = true;
+            })
+            .AddEntityFrameworkStores<AppIdentityDBContext>()
+            .AddDefaultTokenProviders();
 
             // Add services to the container.
             builder.Services.AddControllers();
@@ -39,7 +52,16 @@ namespace GATO
             builder.Services.AddScoped<ICommentRepo, CommentRepo>();
             builder.Services.AddScoped<IPostRepo, PostRepo>();
             builder.Services.AddScoped<ILikesRepo,LikeRepo>();
+            builder.Services.AddScoped<ISavedPosts,SavedPostRepo>();
             builder.Services.AddAutoMapper(typeof(MappingProfile));
+
+            builder.Services.AddScoped(typeof(IAuthServices), typeof(AuthService));
+            builder.Services.AddTransient<IEmailService, EmailService>();
+
+
+
+
+
             #endregion
 
 
@@ -55,6 +77,7 @@ namespace GATO
             {
                 await _dbcontext.Database.MigrateAsync();//upate-database
                 await _identityDbcontext.Database.MigrateAsync();//upate-database
+                var _usermanager = services.GetRequiredService<UserManager<User>>();
             }
             catch (Exception ex)
             {
@@ -78,6 +101,9 @@ namespace GATO
 
 
             app.UseHttpsRedirection();
+
+
+            app.UseAuthentication();
 
             app.UseAuthorization();
 

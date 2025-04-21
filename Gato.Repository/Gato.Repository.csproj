@@ -15,9 +15,4 @@
     <ProjectReference Include="..\Gato.Core\Gato.Core.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Data\Migrations\" />
-    <Folder Include="identity\Migrations\" />
-  </ItemGroup>
-
 </Project>

@@ -58,7 +58,7 @@ namespace Gato.Repository.Repositories
             var posts = await _dBContext.Posts.Include(x => x.User)
                                                     .ToListAsync();
 
-            var likes = _dBContext.likes.ToList();
+            var likes = _dBContext.likes_Posts.ToList();
 
             var posts_ = _mapper.Map<List<PostDto>>(posts);
 
@@ -87,7 +87,7 @@ namespace Gato.Repository.Repositories
             }
             else
                 throw new UnauthorizedAccessException("You can only delete your own posts.");
-            
+
 
         }
 

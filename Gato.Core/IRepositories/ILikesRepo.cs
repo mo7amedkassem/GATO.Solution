@@ -17,6 +17,8 @@ namespace Gato.Core.IRepositories
         Task addlikeForPostAsync(LikeForPRequest like, int userId);
         Task addlikeForCommentAsync(LikeForCRequest like, int userId);
 
-        Task DeletelikeAsync(int id, User user_par);
+        Task Deletelike_CommentsAsync(int id, User user_par);
+        Task Deletelike_PostsAsync(int id, User user_par);
+
     }
 }

@@ -38,6 +38,7 @@ namespace Gato.Repository.Repositories
             {
                 throw new Exception("Comment not found");
             }
+            
             if (comment.UserId == user_par.Id)
             {
                 _dbContext.Comments.Remove(comment);
@@ -55,7 +56,7 @@ namespace Gato.Repository.Repositories
                                  .Include(x => x.User)
                                  .Include(x=> x.Post).ToListAsync();
 
-            var likes =  _dbContext.likes.ToList();
+            var likes =  _dbContext.likes_Comments.ToList();
 
             var res = _mapper.Map<List<CommentDto>>(comments); 
 

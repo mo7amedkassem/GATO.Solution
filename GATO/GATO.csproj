@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>a28c3cf4-9588-4041-a880-24a95be19876</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -17,6 +18,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Gato.Repository\Gato.Repository.csproj" />
+    <ProjectReference Include="..\Gato.Service\Gato.Service.csproj" />
   </ItemGroup>
 
 </Project>

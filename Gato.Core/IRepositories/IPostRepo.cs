@@ -1,4 +1,5 @@
 ﻿using Gato.Core.Dtos;
+using Gato.Core.Entities;
 using Gato.Core.Entities.Dtos;
 using Gato.Repository.Entities;
 using System;
@@ -15,5 +16,6 @@ namespace Gato.Core.IRepositories
         Task UpdateAsync(Post post,String new_content, User user_Par); 
         Task DeleteAsync(int id, User user_Par);    
         Task<IReadOnlyList<PostDto>> GetAllPosts();
+
     }
 }

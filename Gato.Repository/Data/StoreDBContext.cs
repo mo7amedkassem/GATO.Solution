@@ -36,8 +36,11 @@ namespace Gato.Repository.Data
         public DbSet<Post> Posts { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<Comment> Comments { get; set; }
-        public DbSet<Like> likes { get; set; }
-    
+        public DbSet<Like_Comment> likes_Comments { get; set; }
+        public DbSet<Like_Post> likes_Posts { get; set; }
+        public DbSet<Saved_Posts> savedposts { get; set; }
+
+
 
 
     }

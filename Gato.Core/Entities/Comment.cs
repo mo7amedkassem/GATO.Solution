@@ -11,16 +11,16 @@ namespace Gato.Repository.Entities
     {
         public int Id { get; set; }
         public string Content { get; set; }
-        public DateTime CreatedAt { get; set; } = DateTime.Now;
+        //public DateTime CreatedAt { get; set; } = DateTime.Now;
 
 
         public int PostId { get; set; }
         public Post Post { get; set; }//nav prop
 
 
-        public int UserId { get; set; }
-        public User User { get; set; }//nav prop
+        public int? UserId { get; set; }
+        public User? User { get; set; }//nav prop
 
-        public ICollection<Like> likes { get; set; } = new HashSet<Like>();
+        public ICollection<Like_Comment> likes { get; set; } = new HashSet<Like_Comment>();
     }
 }

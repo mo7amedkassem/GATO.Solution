@@ -32,17 +32,17 @@ namespace Gato.Repository.Repositories
             //if( like.IsPost || like.CommentId  > 0)
             //{
 
-            if (!_context.likes.Any(x => x.CommentId == like.PostId && x.UserId == userId))
+            if (!_context.likes_Posts.Any(x => x.PostId == like.PostId && x.UserId == userId))
             {
 
-                Like newlike = new Like
+                Like_Post newlike = new Like_Post
                 {
                     PostId = like.PostId,
                     UserId = userId,
                     CreatedAt = DateTime.UtcNow,
                 };
 
-                await _context.likes.AddAsync(newlike);
+                await _context.likes_Posts.AddAsync(newlike);
 
                 await _context.SaveChangesAsync();
             }
@@ -66,9 +66,9 @@ namespace Gato.Repository.Repositories
             //if( like.IsPost || like.CommentId  > 0)
             //{
 
-            if (!_context.likes.Any(x => x.CommentId == like.CommentId && x.UserId == userId))
+            if (!_context.likes_Comments.Any(x => x.CommentId == like.CommentId && x.UserId == userId))
             {
-                Like newlike = new Like
+                Like_Comment newlike = new Like_Comment
                 {
                     CommentId = like.CommentId,
                     UserId = userId,
@@ -76,7 +76,7 @@ namespace Gato.Repository.Repositories
                 };
 
 
-                await _context.likes.AddAsync(newlike);
+                await _context.likes_Comments.AddAsync(newlike);
 
                 await _context.SaveChangesAsync();
 
@@ -92,9 +92,9 @@ namespace Gato.Repository.Repositories
         }
 
 
-        public async Task DeletelikeAsync(int id, User user_par)
+        public async Task Deletelike_CommentsAsync(int id, User user_par)
         {
-            var like = await _context.likes.FindAsync(id);
+            var like = await _context.likes_Comments.FindAsync(id);
 
             if (like == null)
             {
@@ -102,7 +102,24 @@ namespace Gato.Repository.Repositories
             }
             if (like.UserId == user_par.Id)
             {
-                _context.likes.Remove(like);
+                _context.likes_Comments.Remove(like);
+                await _context.SaveChangesAsync();
+            }
+            else
+                throw new UnauthorizedAccessException("You can only delete your own Like.");
+        }
+
+        public async Task Deletelike_PostsAsync(int id, User user_par)
+        {
+            var like = await _context.likes_Posts.FindAsync(id);
+
+            if (like == null)
+            {
+                throw new Exception("like not found");
+            }
+            if (like.UserId == user_par.Id)
+            {
+                _context.likes_Posts.Remove(like);
                 await _context.SaveChangesAsync();
             }
             else
@@ -110,11 +127,10 @@ namespace Gato.Repository.Repositories
         }
 
 
-
         public async Task<IReadOnlyList<likedto>> Get_All_Likes_For_C_Async(int Comment_Id)
         {
 
-            var likes = await _context.likes.Include(x => x.user)
+            var likes = await _context.likes_Comments.Include(x => x.user)
                            .Where(l => l.CommentId == Comment_Id)
                            .ToListAsync();
             if (likes.Any())
@@ -127,7 +143,7 @@ namespace Gato.Repository.Repositories
 
         public async Task<IReadOnlyList<likedto>> Get_All_Likes_For_P_Async(int Post_Id)
         {
-            var likes = await _context.likes.Include(x => x.user)
+            var likes = await _context.likes_Posts.Include(x => x.user)
                                  .Where(l => l.PostId == Post_Id)
                                  .ToListAsync();
             if (likes.Any())

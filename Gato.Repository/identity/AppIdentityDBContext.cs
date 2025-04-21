@@ -16,6 +16,9 @@ namespace Gato.Repository.identity
             :base(Options) 
         {
 
-        } 
+        }
+
+        public DbSet<User> User { get; set; }
+
     }
 }

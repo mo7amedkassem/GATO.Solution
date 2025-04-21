@@ -23,8 +23,19 @@ namespace GATO.Helpers
                 ForMember(d => d.User, O => O.MapFrom(s => s.User.UserName)).ReverseMap();
 
 
-            CreateMap<Like,likedto>().
+            CreateMap<Like_Comment,likedto>().
                 ForMember(d => d.user, O => O.MapFrom(s => s.user.UserName)).ReverseMap();
+
+            CreateMap<Like_Post, likedto>().
+                ForMember(d => d.user, O => O.MapFrom(s => s.user.UserName)).ReverseMap();
+
+
+            CreateMap<Saved_Posts, SavedPostDto>()
+         .ForMember(d => d.PostCreatorId, O => O.MapFrom(s => s.Post.UserId)) // Map PostCreatorId from Post.UserId
+         .ForMember(d => d.PostCreatorName, O => O.MapFrom(s => s.Post.User.UserName)) // Map PostCreatorName from Post.User.UserName
+         .ForMember(d => d.PostId, O => O.MapFrom(s => s.Post.Id)) // Map PostId from Post.Id
+         .ForMember(d => d.Content, O => O.MapFrom(s => s.Post.Content)) // Map PostContent from Post.Content
+         .ReverseMap();
         }
     }
 }
